@@ -1,8 +1,8 @@
-Elasticsearch JNA Build
+Renameme JNA Build
 =======================
 
 This project exists in order to build a jna jar which supports
-platforms supported by elastic.  It builds native linux bits for jna
+platforms supported by renameme.  It builds native linux bits for jna
 in vagrant, and uses the provided native bits for mac and windows.
 
 
@@ -42,12 +42,12 @@ them, so simply reuse from net.java.dev/jna:
     % curl -L -o build/jna-${VERSION}-javadoc.jar \
       https://oss.sonatype.org/content/repositories/releases/net/java/dev/jna/jna/${VERSION}/jna-${VERSION}-javadoc.jar
 
-Now upload to OSSRH, signing with the Elasticsearch key (it will
+Now upload to OSSRH, signing with the Renameme key (it will
 prompt for passphrase, or if desperate you can use -Dgpg.passphrase
 but please try to avoid):
 
     % mvn gpg:sign-and-deploy-file \
-        -DgroupId=org.elasticsearch \
+        -DgroupId=org.renameme \
         -DartifactId=jna \
         -DgeneratePom=false \
         -Dpackaging=jar \
@@ -90,10 +90,10 @@ them, so simply reuse from upstream net.java.dev/jna:
     % curl -L -o build/jna-${VERSION}${SUFFIX}-javadoc.jar \
       https://oss.sonatype.org/content/repositories/releases/net/java/dev/jna/jna/${VERSION}/jna-${VERSION}-javadoc.jar
 
-Now upload to OSSRH, signing with the Elasticsearch key:
+Now upload to OSSRH, signing with the Renameme key:
 
     mvn gpg:sign-and-deploy-file \
-      -DgroupId=org.elasticsearch \
+      -DgroupId=org.renameme \
       -DartifactId=jna \
       -DgeneratePom=false \
       -Dpackaging=jar \
@@ -106,4 +106,4 @@ Now upload to OSSRH, signing with the Elasticsearch key:
       -Dgpg.keyname=D88E42B4
 
 
-[example-release]: http://search.maven.org/#artifactdetails%7Corg.elasticsearch%7Cjna%7C4.4.0-1%7Cjar
+[example-release]: http://search.maven.org/#artifactdetails%7Corg.renameme%7Cjna%7C4.4.0-1%7Cjar

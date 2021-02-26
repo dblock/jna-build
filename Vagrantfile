@@ -21,7 +21,7 @@
 
 Vagrant.configure(2) do |config|
   config.vm.define "jna-build" do |config|
-    config.vm.box = "elastic/centos-6-x86_64"
+    config.vm.box = "renameme/centos-6-x86_64"
     config.vm.provider "virtualbox" do |v|
       # Give the box 4GB because our build tools are beasts
       #v.memory = 4096
