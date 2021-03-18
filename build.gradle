@@ -1,6 +1,6 @@
 apply plugin: 'maven-publish'
 
-group = 'org.elasticsearch'
+group = 'org.opensearch'
 String upstreamVersion = '5.5.0'
 
 // Rarely, modifications may need to be made to the jna jar that
@@ -151,9 +151,9 @@ publishing {
       artifact buildJar
       pom.withXml { XmlProvider xml ->
         Node node = xml.asNode()
-        node.appendNode('name', 'Elastic JNA Distribution')
+        node.appendNode('name', 'OpenSearch JNA Distribution')
         node.appendNode('description',
-          'A build of jna which supports all platforms supported by Elasticsearch')
+          'A build of jna which supports all platforms supported by OpenSearch')
         node.appendNode('url', 'https://github.com/java-native-access/jna')
 
         Node license = node.appendNode('licenses').appendNode('license')
